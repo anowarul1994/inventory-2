@@ -12,13 +12,7 @@
 
   <!-- Favicons -->
   @include('backend.includes.style')
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -30,6 +24,17 @@
  @include('backend.includes.sidebar')
 
   <main id="main" class="main">
+    {{-- <div class="pagetitle">
+      <h1>@yield('page_title')</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+          <li class="breadcrumb-item active">@yield('menu_title')</li>
+          <li class="breadcrumb-item active">@yield('menu_subtitle')</li>
+        </ol>
+      </nav>
+    </div> --}}
+    <!-- End Page Title -->
 
     @yield('content')
 

@@ -25,7 +25,7 @@ class CategoryController extends Controller
     public function store(CategoryStoreRequest $request, CategoryService $services)
     {
         
-        // $services->categoryStore($request);
+        $services->categoryStore($request);
        $this->setSuccessMessage('success', 'Category has been added');
         return redirect()->back();
         

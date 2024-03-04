@@ -25,7 +25,7 @@
                                              <span class="text-danger mt-1">{{ $message }}</span>
                                        @enderror
                                       </div>
-                                      <button type="submit" class="btn btn-success mt-2">Add Brand</button>
+                                      <button type="submit" class="btn btn-success mt-2">Update Brand</button>
                                    </div>
                               </form>
 

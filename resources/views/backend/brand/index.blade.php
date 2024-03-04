@@ -11,8 +11,8 @@
           <div class="col-md-12">
                <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                         <h2>Category Manage</h2>
-                         <a href="{{ route('category.create') }}" class="btn btn-sm btn-success">Add</a>
+                         <h2>Brand Manage</h2>
+                         <a href="{{ route('brand.create') }}" class="btn btn-sm btn-success">Add</a>
                     </div>
                     <div class="body">
                          <table class="table table-bordered table-hover table-striped">
@@ -25,14 +25,14 @@
                                    </tr>
                               </thead>
                               <tbody>
-                                   @foreach ($categories as $category)
+                                   @foreach ($brands as $brand)
                                    <tr>
                                         <td class="text-center">{{ $loop->index+1 }}</td>
-                                        <td>{{ $category->name }}</td>
-                                        <td>{{ $category->slug }}</td>
+                                        <td>{{ $brand->name }}</td>
+                                        <td>{{ $brand->slug }}</td>
                                         <td class="text-center">
-                                             <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-info">Edit</a>
-                                             <a href="{{ route('category.destroy', $category->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                                             <a href="{{ route('brand.edit', $brand->id) }}" class="btn btn-sm btn-info">Edit</a>
+                                             <a href="{{ route('brand.destroy', $brand->id) }}" class="btn btn-sm btn-danger">Delete</a>
                                         </td>
                                    </tr>
                                    @endforeach

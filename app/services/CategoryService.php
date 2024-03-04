@@ -18,10 +18,10 @@ Class CategoryService
      }
      public function categoryUpdate($request)
      {
-          $updateCategory= Category::update([
-               'name'=>$request->name,
-               'slug'=>Str::slug($request->name,'-'),
-           ]);
+          $updateCategory = Category::update([
+               'name' => $request->name,
+               'slug' => Str::slug($request->name),
+          ]);
 
           return $updateCategory;
      }

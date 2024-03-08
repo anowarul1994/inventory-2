@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
 use App\Models\Brand;
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use App\Services\BrandService;
+
 
 class BrandController extends Controller
 {
@@ -23,13 +23,9 @@ class BrandController extends Controller
     }
 
 
-    public function store(BrandRequest $request)
+    public function store(BrandRequest $request, BrandService $brandService)
     {
-        Brand::create([
-            'name'=>$request->name,
-            'slug'=>Str::slug($request->name),
-        ]);
-
+        $brandService->brandStore($request);
         $this->setSuccessMessage('success', 'Brand added Successfully');
         return redirect()->back();
         
@@ -43,13 +39,9 @@ class BrandController extends Controller
     }
     
 
-    public function update(BrandRequest $request, $id)
+    public function update(BrandRequest $request, $id, BrandService $brandService)
     {
-        $brand = Brand::find($id);
-        $brand->name = $request->name;
-        $brand->slug = Str::slug($request->name);
-        $brand->save();
-
+        $brandService->brandUpdate($id, $request);
         $this->setSuccessMessage('success', 'Brand Updated Successfully');
         return redirect()->route('brand.index');
     }
@@ -59,7 +51,7 @@ class BrandController extends Controller
     {
         $brand = Brand::find($id);
         $brand->delete();
-        $this->setSuccessMessage('addWarning', 'Brand Deleted Successfully');
+        $this->setSuccessMessage('error', 'Brand Deleted Successfully');
         return redirect()->route('brand.index');
     }
 }

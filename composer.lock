@@ -2548,7 +2548,7 @@
         },
         {
             "name": "php-flasher/flasher-laravel",
-            "version": "v1.15.9",
+            "version": "v1.15.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-laravel.git",
@@ -2619,7 +2619,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.15.9"
+                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.15.10"
             },
             "funding": [
                 {

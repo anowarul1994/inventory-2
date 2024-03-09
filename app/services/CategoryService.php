@@ -28,7 +28,6 @@ Class CategoryService
                'name'=>$request->name,
                'slug'=>Str::slug($request->name),
            ]);
-
           return $updateCategory;
      }
      

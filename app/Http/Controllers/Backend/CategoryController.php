@@ -9,11 +9,12 @@ use App\Services\CategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryStoreRequest;
 
+
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(CategoryService $categories)
     {
-        $categories = Category::latest()->get();
+        $categories = $categories->categoryList();
         return view('backend.category.index', compact('categories'));
     }
 
@@ -35,12 +36,20 @@ class CategoryController extends Controller
         $category =Category::find($id);
         return view('backend.category.edit', compact('category'));
     }
-    public function update($id)
+    public function update(CategoryStoreRequest $request, CategoryService $categoryService,$id)
     {
         
+        $categoryService->categoryUpdate($id, $request);
+        $this->setSuccessMessage('success', 'Category has been Updated');
+         return redirect()->route('category.index');
+         
     }
-    public function destroy()
+
+    public function destroy($id)
     {
-        return "categoryCreate";
+        $category= Category::find($id);
+        $category->delete();
+        $this->setSuccessMessage('warning', 'Category has been Deleted');
+         return redirect()->route('category.index');
     }
 }

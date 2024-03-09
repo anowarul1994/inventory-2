@@ -20,7 +20,7 @@
                                    @csrf
                                    <div class="mb-0">
                                         <label for="name" class="form-label">Name</label>
-                                        <input type="text" name="name" value="{{ $category->name }}" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter Category Name">
+                                        <input type="text" name="name" value="{{ $category->name ?? old('name') }}" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter Category Name">
                                         @error('name')
                                              <span class="text-danger mt-1">{{ $message }}</span>
                                        @enderror

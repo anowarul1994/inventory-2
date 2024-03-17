@@ -46,6 +46,24 @@
           
         </ul>
       </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#product" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Product</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="product" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ route('product.create') }}">
+              <i class="bi bi-circle"></i><span>Add</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('product.index') }}">
+              <i class="bi bi-circle"></i><span>Manage</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
       <!-- End Components Nav -->
 
 

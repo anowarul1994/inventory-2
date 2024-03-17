@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,7 @@ use App\Http\Controllers\Backend\CategoryController;
 
 Route::get('/', [AdminController::class,'adminLoginFormShow'])->name('admin.login.form');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //category controller
 Route::get('/categories',[CategoryController::class,'index'])->name('category.index');
@@ -38,3 +37,18 @@ Route::post('/brand/store',[BrandController::class,'store'])->name('brand.store'
 Route::get('/brand/edit/{id}',[BrandController::class,'edit'])->name('brand.edit');
 Route::post('/brand/update/{id}',[BrandController::class,'update'])->name('brand.update');
 Route::get('/brand/destroy/{id}',[BrandController::class,'destroy'])->name('brand.destroy');
+
+//Product Controller
+Route::get('/products',[ProductController::class,'index'])->name('product.index');
+Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
+Route::post('/product/store',[ProductController::class,'store'])->name('product.store');
+Route::get('/product/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+Route::post('/product/update/{id}',[ProductController::class,'update'])->name('product.update');
+Route::get('/product/show/{id}',[ProductController::class,'show'])->name('product.show');
+Route::get('/product/destroy/{id}',[ProductController::class,'destroy'])->name('product.destroy');
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

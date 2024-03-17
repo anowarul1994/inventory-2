@@ -15,13 +15,13 @@ class CategoryController extends Controller
     public function index(CategoryService $categories)
     {
         $categories = $categories->categoryList();
-        return view('backend.category.index', compact('categories'));
+        return view('backend.pages.category.index', compact('categories'));
     }
 
     
     public function create()
     {
-        return view('backend.category.add');
+        return view('backend.pages.category.add');
     }
     public function store(CategoryStoreRequest $request, CategoryService $services)
     {
@@ -34,7 +34,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category =Category::find($id);
-        return view('backend.category.edit', compact('category'));
+        return view('backend.pages.category.edit', compact('category'));
     }
     public function update(CategoryStoreRequest $request, CategoryService $categoryService,$id)
     {

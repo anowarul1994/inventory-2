@@ -13,13 +13,13 @@ class BrandController extends Controller
     public function index()
     {
         $brands = Brand::orderBy('id', 'desc')->get();
-        return view('backend.brand.index', compact('brands'));
+        return view('backend.pages.brand.index', compact('brands'));
     }
 
 
     public function create()
     {
-        return view('backend.brand.add');
+        return view('backend.pages.brand.add');
     }
 
 
@@ -35,7 +35,7 @@ class BrandController extends Controller
     public function edit($id)
     {
         $brand = Brand::find($id);
-        return view('backend.brand.edit', compact('brand'));
+        return view('backend.pages.brand.edit', compact('brand'));
     }
     
 

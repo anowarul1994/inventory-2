@@ -16,7 +16,6 @@ class BrandSeeder extends Seeder
         Brand::create([
             'name'=>'ONE PLUS',
             'slug'=>Str::slug('one-plus'),
-            'category_id'=>1,
         ]);
     }
 }

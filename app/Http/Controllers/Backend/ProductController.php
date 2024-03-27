@@ -13,6 +13,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     protected $productServices;
+    
     public function __construct(ProductService $productService)
     {
         $this->productServices = $productService;

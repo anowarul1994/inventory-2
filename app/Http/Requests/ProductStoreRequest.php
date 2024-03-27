@@ -28,7 +28,7 @@ class ProductStoreRequest extends FormRequest
             'buy_price' => 'required',
             'price' => 'required',
             'qty' => 'required',
-            'sku' => 'required',
+            'sku' => 'required|unique:products',
             'short_description' => 'required',
             'long_description' => 'required',
             'image' => 'required',

@@ -1,4 +1,5 @@
 <aside id="sidebar" class="sidebar">
+  
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -16,12 +17,12 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('category.create') }}">
-              <i class="bi bi-circle"></i><span>Add</span>
+              <i class='bx bx-plus' ></i><span>Add</span>
             </a>
           </li>
           <li>
             <a href="{{ route('category.index') }}">
-              <i class="bi bi-circle"></i><span>Manage</span>
+              <i class='bx bx-list-ul'></i><span>Manage</span>
             </a>
           </li>
           
@@ -35,12 +36,12 @@
         <ul id="brand" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('brand.create') }}">
-              <i class="bi bi-circle"></i><span>Add</span>
+              <i class='bx bx-plus' ></i><span>Add</span>
             </a>
           </li>
           <li>
             <a href="{{ route('brand.index') }}">
-              <i class="bi bi-circle"></i><span>Manage</span>
+              <i class='bx bx-list-ul'></i><span>Manage</span>
             </a>
           </li>
           
@@ -53,12 +54,12 @@
         <ul id="product" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('product.create') }}">
-              <i class="bi bi-circle"></i><span>Add</span>
+              <i class='bx bx-plus' ></i><span>Add</span>
             </a>
           </li>
           <li>
             <a href="{{ route('product.index') }}">
-              <i class="bi bi-circle"></i><span>Manage</span>
+              <i class='bx bx-list-ul'></i><span>Manage</span>
             </a>
           </li>
           

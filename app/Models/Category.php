@@ -13,4 +13,10 @@ class Category extends Model
     public function setNameAttribute($value){
         $this->attributes['name'] = strtoupper($value);
     }
+
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

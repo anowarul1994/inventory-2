@@ -29,8 +29,17 @@
                                    <tr>
                                         <td class="text-center align-content-center" >{{ $loop->index+1 }}</td>
                                         <td style="align-content: center" >{{ $product->category?->name }}</td>
+                                        @php
+                                            $url = parse_url($product->image); //base url different
+                                             $image_path = public_path($url['path']);
+                                        @endphp
                                         <td style="align-content: center">
+                                             @if (file_exists($image_path))
                                              <img src="{{ $product->image }}" width="40px" alt="">
+                                          
+                                             @else
+                                                  <img src="{{ asset('images/default.jpg') }}" width="40px" alt="">
+                                             @endif
                                              {{ $product->name }}
                                         </td>
                                         <td>

@@ -30,7 +30,7 @@
                                                      </select>
                                                   @error('cat_id')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -39,7 +39,7 @@
                                                   <input type="text" value="{{ old('name') }}" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter Product Name">
                                                   @error('name')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -48,7 +48,7 @@
                                                   <input type="text" value="{{ old('buy_price') }}" name="buy_price" class="form-control @error('buy_price') is-invalid @enderror" id="name" placeholder="Enter Buy Price">
                                                   @error('buy_price')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -57,7 +57,7 @@
                                                   <input type="text" value="{{ old('price') }}" name="price" class="form-control @error('price') is-invalid @enderror" id="name" placeholder="Enter Sale Price">
                                                   @error('price')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -66,7 +66,7 @@
                                                   <input type="text" value="{{ old('discount_price') }}" name="discount_price" class="form-control @error('discount_price') is-invalid @enderror" id="name" placeholder="Enter Sale Price">
                                                   @error('discount_price')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -75,7 +75,7 @@
                                                   <input type="number" value="{{ old('qty') }}" name="qty" class="form-control @error('qty') is-invalid @enderror" id="qty" placeholder="Enter your Qty">
                                                   @error('qty')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -84,7 +84,7 @@
                                                   <input type="text" value="{{ old('sku') }}" name="sku" class="form-control @error('sku') is-invalid @enderror" id="sku" placeholder="Enter your sku">
                                                   @error('sku')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
                                         <div class="col-md-6">
@@ -93,36 +93,36 @@
                                                   <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image">
                                                   @error('image')
                                                        <span class="text-danger mt-1">{{ $message }}</span>
-                                                  @enderror                                      
+                                                  @enderror
                                              </div>
                                         </div>
 
                                    </div>
-  
+
                                    <div class="mb-1">
                                         <label for="short_description" class="form-label">Short Description</label><span style="color:red">*</span>
                                         <textarea name="short_description" class="ckeditor form-control @error('short_description') is-invalid @enderror" id="short_description" placeholder="Enter short description"> {{ old('short_description') }}</textarea>
                                         @error('short_description')
                                              <span class="text-danger mt-1">{{ $message }}</span>
-                                        @enderror                                      
+                                        @enderror
                                    </div>
                                    <div class="mb-1">
                                         <label for="long_description" class="form-label">Long Description</label><span style="color:red">*</span>
                                         <textarea name="long_description" class="ckeditor form-control @error('long_description') is-invalid @enderror" id="long_description" placeholder="Enter short long description"> {{ old('long_description') }}</textarea>
                                         @error('long_description')
                                              <span class="text-danger mt-1">{{ $message }}</span>
-                                        @enderror                                      
+                                        @enderror
                                    </div>
-                                   
+
                                    <button type="submit" class="btn btn-success mt-2"><i class='bx bx-plus'></i> Add Product</button>
                               </form>
                          </div>
                     </div>
-               </div>   
+               </div>
           </div>
     </div>
   </section>
-    
+
 @endsection
 
 @push('script')

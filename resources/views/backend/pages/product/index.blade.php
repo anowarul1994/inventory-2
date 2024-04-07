@@ -36,9 +36,9 @@
                                         <td style="align-content: center">
                                              @if (file_exists($image_path))
                                              <img src="{{ $product->image }}" width="40px" alt="">
-                                          
+
                                              @else
-                                                  <img src="{{ asset('images/default.jpg') }}" width="40px" alt="">
+                                                  <img src="{{ asset(Helper::DEFAULT_IMAGE_PATH) }}" width="40px" alt="">
                                              @endif
                                              {{ $product->name }}
                                         </td>
@@ -48,9 +48,9 @@
                                              <strong>Profit price</strong>: {{$product->price - $product->buy_price - $product->discount_price }} Tk.
                                         </td>
                                         <td style="align-content: center">
-                                             
+
                                              {{ $product->qty ?? '' }}
-                                              
+
                                         </td>
                                         <td class="align-middle" >
                                              <a href="{{ route('product.show', $product->id) }}" class=" btn btn-sm btn-success"><i class='bx bxs-show'></i></a>
@@ -62,10 +62,10 @@
                               </tbody>
                          </table>
                     </div>
-               </div>   
+               </div>
           </div>
     </div>
-    
+
   </section>
-    
+
 @endsection

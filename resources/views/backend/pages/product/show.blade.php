@@ -34,7 +34,7 @@
                                 <th>Qty</th>
                                 <td>{{ $product->qty }}</td>
                             </tr>
-                            
+
                             <tr class="align-middle">
                                 <th>Discount Price</th>
                                 <td>{{ $product->discount_price?? '' }}</td>
@@ -51,24 +51,35 @@
                                 <th>Long Description</th>
                                 <td>{!! $product->long_description?? '' !!}</td>
                             </tr>
+
+                            @php
+                                $url = parse_url($product->image); //base url different
+                                $image_path = public_path($url['path']);
+                            @endphp
                             <tr class="align-middle">
                                 <th>Image</th>
                                 <td>
-                                    <img src="{{ $product->image }}" width="150px" alt="">
+                                    @if (file_exists($image_path))
+                                        <img src="{{ $product->image }}" width="40px" alt="">
+
+                                    @else
+                                        <img src="{{ asset(Helper::DEFAULT_IMAGE_PATH)}}" width="40px" alt="">
+                                    @endif
+                                    {{ $product->name }}
                                 </td>
                             </tr>
 
-                            
+
                          </table>
 
                          <a class=" ms-3 mb-3 btn btn-sm btn-warning" href="{{ route('product.index') }}"><i class='bx bx-arrow-back'></i> Back</a>
 
-                         
+
                     </div>
-               </div>   
+               </div>
           </div>
     </div>
-    
+
   </section>
-    
+
 @endsection

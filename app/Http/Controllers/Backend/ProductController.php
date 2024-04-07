@@ -13,7 +13,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     protected $productServices;
-    
+
     public function __construct(ProductService $productService)
     {
         $this->productServices = $productService;
@@ -60,7 +60,7 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
 
-    
+
     public function show($id)
     {
         $product= Product::find($id);
@@ -78,7 +78,7 @@ class ProductController extends Controller
         if(file_exists($image_path)){
             unlink($image_path);
         }
-        
+
         $product->delete();
         $this->setSuccessMessage('danger', 'Product has been Deleted');
          return redirect()->route('product.index');
